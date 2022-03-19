@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaio Augusto - Portfólio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+        <!--favicon-img--> 
+        <link rel="icon" type="{% static 'image/png' %}" href="{% static 'images/robo.png' %}">
+        <!--favicon-img-->
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+
+    <body>
+        {% block content %} {% endblock %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bez.js' %}"></script>
+        <script src="{% static 'js/pace.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+    </body>
+
+</html>

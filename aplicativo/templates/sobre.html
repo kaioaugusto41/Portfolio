@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="navigation">
+  <div class="logo hover ">
+     <a href="{% url 'index' %}" class="text">PORTFÓLIO</a>
+  </div>
+</div>
+  
+<main id="about-one">     
+      <!-- CUSTOM CURSOR -->
+      <div class="cursor scale"></div>
+      <div class="cursor-two scale"></div>
+      <!-- CUSTOM CURSOR -->
+
+    <div id="preloader">
+        <div class="p">
+            <img src="{% static 'images/robo.png' %}" alt="headphone">
+        </div>
+        <br>
+        <div class="p">Pegue um café e venha conhecer meus projetos :)</div>
+    </div>
+    <div id="about-one-content">
+                
+<!-- progress-bar -->
+<div class="progress-bar-container fade-in">
+    <div class="progressbar"></div>
+</div>
+<!-- progress-bar -->
+  
+<div class="scrolling-part"></div>   
+<div class="heading">
+    <span class="text">
+      {{sobre.titulo}}
+    </span> 
+</div>    
+
+<div class="center">
+  <!-- ABOUT IMG -->
+  <div class="about-img img">
+    <img class="img-parallax" src="{% static 'images/sobre-mim.jpeg' %}" alt="about-img">
+  </div>
+  <!-- ABOUT IMG -->
+</div>
+
+<div class="center">
+  <div class="about-text">
+    <div class="about-text-heading  text-scroll">
+     {{sobre.subtitulo}}
+    </div>
+    <div class="about-text-content  text-scroll">
+      {{sobre.texto}}
+    </div>
+    <a href="{{sobre.link_linkedin}}" target=_blank class="text-scroll hover "><img src="{% static 'images/linkedin.png' %}" alt="clock"></a><br>
+  </div>
+</div><br>
+
+<div class="signature">
+   <span class="text-scroll"> Kaio Augusto.</span> 
+</div>
+             
+ <!-- HEADPHONE IMG -->
+ <div class="headphone img text">
+  <img src="{% static 'images/robo.png' %}" title="headphone zone" class="text" alt="headphone">
+</div>
+ <!-- HEADPHONE IMG -->
+
+
+</div>
+</div>
+
+    
+</main>
+    <!-- MAIN CONTENT -->
+
+{% include 'partials/footer.html' %}
+{% endblock %}

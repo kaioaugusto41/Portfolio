@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'partials/menu.html' %}
+
+<!-- MAIN CONTENT -->
+<main id="blog-one">
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor scale"></div>
+    <div class="cursor-two scale"></div>
+    <!-- CUSTOM CURSOR -->
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="p">
+            <img src="{% static 'images/robo.png' %}" alt="headphone">
+        </div>
+        <br>
+        <div class="p">Pegue um café e venha conhecer meus projetos :)</div>
+    </div>
+    <!-- PRELOADER -->
+
+    <div id="blog-one-content">
+
+    <!-- HEADING -->
+    <div class="heading">
+        <span class="text"> 
+            #PROJETOS
+        </span> 
+    </div>
+    <!-- HEADING -->
+
+    <div class="center">
+        <!-- BLOG-CONTAINER -->
+        <div id="blogs-container">
+
+            <!-- PROJETO INÍCIO -->
+            {% for projeto in projetos %}
+            <div class="blog fade-up">
+                <div class="blog-img">
+                    {% if projeto.id == 1%}
+                    <img src="{% static 'images/portfolio.png' %}" alt="blog-img">
+                    {% elif projeto.id == 2%}
+                    <img src="{% static 'images/escola-evolucao.png' %}" alt="blog-img">
+                    {% elif projeto.id == 3%}
+                    <img src="{% static 'images/alura-receita.png' %}" alt="blog-img">
+                    {% endif %}
+                </div>
+                <div class="blog-text">
+                    <div class="blog-heading">{{projeto.titulo_projeto}}</div>
+                    <div class="blog-description">{{projeto.resumo_projeto}}</div>
+                    <div class="blog-info">
+                        <div class="blog-duration"><img src="{% static 'images/icone-python.png' %}" alt="clock">&nbsp;</div>
+                        <div class="blog-type">{{projeto.linguagem_projeto}} / {{projeto.framework_projeto}}</div>
+                        <a href="{% url 'projeto' projeto.id %}" title="Read More">
+                            <div class="blog-read-more">
+                                <i class="gg-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-date">{{projeto.data_pub}}</div>
+            </div>
+            {% endfor %}
+            <!-- PROJETO FINAL -->
+
+        </div>
+        <!-- BLOG-CONTAINER-->
+    </div>
+
+    <!-- HEADPHONE IMG -->
+    <div class="headphone img text">
+        <img src="{% static 'images/robo.png' %}" title="headphone zone" class="text" alt="headphone">
+    </div>
+    <!-- HEADPHONE IMG -->
+
+    <!-- progress-bar -->
+    <div class="progress-bar-container fade-in">
+        <div class="progressbar"></div>
+    </div>
+    <!-- progress-bar -->
+
+
+</main>
+
+{% include 'partials/footer.html' %}
+{% endblock %}
