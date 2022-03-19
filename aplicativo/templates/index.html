@@ -40,11 +40,11 @@
             {% for projeto in projetos %}
             <div class="blog fade-up">
                 <div class="blog-img">
-                    {% if projeto.id == 1%}
+                    {% if projeto.id == 5%}
                     <img src="{% static 'images/portfolio.png' %}" alt="blog-img">
-                    {% elif projeto.id == 2%}
+                    {% elif projeto.id == 6%}
                     <img src="{% static 'images/escola-evolucao.png' %}" alt="blog-img">
-                    {% elif projeto.id == 3%}
+                    {% elif projeto.id == 7%}
                     <img src="{% static 'images/alura-receita.png' %}" alt="blog-img">
                     {% endif %}
                 </div>
@@ -52,7 +52,7 @@
                     <div class="blog-heading">{{projeto.titulo_projeto}}</div>
                     <div class="blog-description">{{projeto.resumo_projeto}}</div>
                     <div class="blog-info">
-                        <div class="blog-duration"><img src="{% static 'images/icone-python.png' %}" alt="clock">&nbsp;</div>
+                        <div class="blog-duration"><img src="{% static 'images/icones_linguagens/icone-python.png' %}" alt="clock">&nbsp;</div>
                         <div class="blog-type">{{projeto.linguagem_projeto}} / {{projeto.framework_projeto}}</div>
                         <a href="{% url 'projeto' projeto.id %}" title="Read More">
                             <div class="blog-read-more">
