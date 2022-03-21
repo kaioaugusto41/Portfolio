@@ -9,7 +9,8 @@ def index(request):
 
 def projeto(request, projeto_id):
     dados = {
-        'projeto': get_object_or_404(Projeto, pk=projeto_id)
+        'projeto': get_object_or_404(Projeto, pk=projeto_id),
+        'sobre': Sobre.objects.get(id=1)
     }
     return render(request, 'projeto.html', dados)
 
