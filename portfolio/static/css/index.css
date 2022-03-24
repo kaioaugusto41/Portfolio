@@ -867,9 +867,10 @@ BLOG ONE
     position: relative;
     z-index: 2;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
 }
 #blog-one .blog{
     display: flex;
@@ -879,13 +880,25 @@ BLOG ONE
     background: rgb(240,240,240,.1);
     backdrop-filter: blur(10px);
     padding: 20px;
-    width: auto;
+    width: 33%;
+    float: left;
     margin: 20px;
     overflow: hidden;
     color: rgb(240,240,240);
     font-family: poppins;
     border-radius: 10px;
-}
+    }
+
+    #blog-one #blogs-container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        align-content: space-around;
+    }
 
 #blog-one .blog-img{
     width: auto;
