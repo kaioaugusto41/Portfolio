@@ -66,7 +66,7 @@ BLOG-SINGLE
 /*====================================
 COMMON
 ====================================*/
-   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @font-face {
         font-family: "monument";
         src: url('fonts/monumentextended-regular-webfont.woff2') format('woff2'),
@@ -831,7 +831,7 @@ BLOG ONE
 ====================================*/
 
 #blog-one{
-    background:url(../images/blog-bg.jpg);
+    background:url(../images/blog-bg.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -867,10 +867,9 @@ BLOG ONE
     position: relative;
     z-index: 2;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #blog-one .blog{
     display: flex;
@@ -880,25 +879,13 @@ BLOG ONE
     background: rgb(240,240,240,.1);
     backdrop-filter: blur(10px);
     padding: 20px;
-    width: 33%;
-    float: left;
+    width: auto;
     margin: 20px;
     overflow: hidden;
     color: rgb(240,240,240);
     font-family: poppins;
     border-radius: 10px;
-    }
-
-    #blog-one #blogs-container {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
-        justify-content: center;
-        align-content: space-around;
-    }
+}
 
 #blog-one .blog-img{
     width: auto;
@@ -1577,7 +1564,7 @@ BLOG-ONE
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: url(../images/blog-bg.jpg);
+    background: url(../images/blog-bg.JPG);
      background-position: center;
      background-attachment: fixed;
      background-size: cover;
